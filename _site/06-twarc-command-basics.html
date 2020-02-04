@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Twarc Command Basics &middot; Learn Twarc!
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/learn-twarc/assets/css/poole.css">
+  <link rel="stylesheet" href="/learn-twarc/assets/css/syntax.css">
+  <link rel="stylesheet" href="/learn-twarc/assets/css/hyde.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/learn-twarcpublic/apple-touch-icon-144-precomposed.png"> -->
+                                 <!-- <link rel="shortcut icon" href="/learn-twarcpublic/favicon.ico"> -->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-dn">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/learn-twarc">
+          Learn Twarc!
+        </a>
+      </h1>
+      <p class="lead">Start using twarc for twitter data collection.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- <a class="sidebar-nav-item" href="/learn-twarc">Home</a> -->
+
+      
+
+      
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/01-quick-start.html">Quickstart Guide</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/02-twitter-setup.html">Twitter Setup</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/03-command-line-basics.html">Command Line Basics</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/04-install-python.html">Install Python</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/05-install-twarc.html">Install & Configure Twarc</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/learn-twarc/06-twarc-command-basics.html">Twarc Command Basics</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+
+      <!-- <a class="sidebar-nav-item" href="https://www.docnow.io/">DocNow</a> -->
+      <!-- <a class="sidebar-nav-item" href="/archive/v.zip">Download</a> -->
+      <!-- <a class="sidebar-nav-item" href="">GitHub project</a> -->
+      <!-- <span class="sidebar-nav-item">Currently v</span> -->
+    </nav>
+
+    <p><a href="/learn-twarc/about">About</a> | <a href="https://www.docnow.io/">DocNow</a></p>
+    <!-- <p>&copy; 2020. All rights reserved.</p> -->
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <!-- <h1 class="page-title">Twarc Command Basics</h1> -->
+  <h1 class="no_toc" id="start-collecting-twarc-command-basics">Start Collecting: Twarc Command Basics</h1>
+
+<p>Let’s start collecting tweets! Consider using a spreadsheet to keep track of the datasets you create using Twarc. You can use this <a href="https://docs.google.com/spreadsheets/d/1FJ-wdIXZWcA8OTc1A9xtkVrho6FZ8TwkdVpbaoK4CRA/edit?usp=sharing" target="_blank">Collection Template</a> to get started. Click on the <a href="https://docs.google.com/spreadsheets/d/1FJ-wdIXZWcA8OTc1A9xtkVrho6FZ8TwkdVpbaoK4CRA/edit?usp=sharing" target="_blank">template link</a> to open, select File &gt; Make a Copy to create an editable document in your Google Drive.</p>
+
+<h2 class="no_toc" id="using-twarc-a-typical-workflow">Using Twarc: A Typical Workflow</h2>
+
+<p>Each time you use twarc to collect twitter data, start here:</p>
+<ol>
+  <li><strong>Use the command line to navigate into your twarc folder</strong>
+    <ul>
+      <li><strong>Open</strong> the Terminal application (MacOS users), or Command Prompt (Windows users)</li>
+      <li><strong>Navigate</strong> into the twarc folder on your desktop, or another folder where you want to save your twitter data, using the <a href="/learn-twarc/03-command-line-basics"><code class="highlighter-rouge">cd</code> <strong>change directory</strong> command</a>. In your shell prompt, type in <code class="highlighter-rouge">cd</code> followed by the path of your twarc folder, then press enter.</li>
+    </ul>
+  </li>
+  <li><strong>Start Twarcing!</strong>
+    <ul>
+      <li><strong>Enter</strong> the twarc commands into your command line, following the detailed usage guide below.</li>
+      <li><strong>Usage Guides:</strong> <a href="#for-mac-os">for MacOS</a> | <a href="#for-windows">for Windows</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p>For the following twarc lessons, all <code><span style="color:blue">blue text</span></code> can be modified to fit your purpose. These are either file names or search/filter terms.</p>
+
+<p>Use the Table of Contents below to quickly navigate this guide.</p>
+
+<h3 class="no_toc" id="table-of-contents">Table of contents</h3>
+
+<ol id="markdown-toc">
+  <li><a href="#for-mac-os" id="markdown-toc-for-mac-os">For Mac OS</a>    <ol>
+      <li><a href="#search" id="markdown-toc-search">Search</a></li>
+      <li><a href="#more-search-examples" id="markdown-toc-more-search-examples">More Search Examples</a></li>
+      <li><a href="#filter" id="markdown-toc-filter">Filter</a></li>
+      <li><a href="#users" id="markdown-toc-users">Users</a></li>
+      <li><a href="#followers" id="markdown-toc-followers">Followers</a></li>
+      <li><a href="#friends" id="markdown-toc-friends">Friends</a></li>
+      <li><a href="#dehydrated-and-rehydrated-data-sets" id="markdown-toc-dehydrated-and-rehydrated-data-sets">Dehydrated and Rehydrated Data Sets</a>        <ol>
+          <li><a href="#dehydrate-your-dataset" id="markdown-toc-dehydrate-your-dataset">Dehydrate your Dataset</a></li>
+          <li><a href="#rehydrate-a-dataset" id="markdown-toc-rehydrate-a-dataset">Rehydrate a Dataset</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#for-windows" id="markdown-toc-for-windows">For Windows</a>    <ol>
+      <li><a href="#search-1" id="markdown-toc-search-1">Search</a></li>
+      <li><a href="#more-search-examples-1" id="markdown-toc-more-search-examples-1">More Search Examples</a></li>
+      <li><a href="#filter-1" id="markdown-toc-filter-1">Filter</a></li>
+      <li><a href="#users-1" id="markdown-toc-users-1">Users</a></li>
+      <li><a href="#followers-1" id="markdown-toc-followers-1">Followers</a></li>
+      <li><a href="#friends-1" id="markdown-toc-friends-1">Friends</a></li>
+      <li><a href="#dehydrated-and-rehydrated-data-sets-1" id="markdown-toc-dehydrated-and-rehydrated-data-sets-1">Dehydrated and Rehydrated Data Sets</a>        <ol>
+          <li><a href="#dehydrate-your-dataset-1" id="markdown-toc-dehydrate-your-dataset-1">Dehydrate your Dataset</a></li>
+          <li><a href="#rehydrate-a-dataset-1" id="markdown-toc-rehydrate-a-dataset-1">Rehydrate a Dataset</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="for-mac-os">For Mac OS</h2>
+
+<h3 id="search">Search</h3>
+<p>This uses Twitter’s <a href="https://developer.twitter.com/en/docs/api-reference-index">search/tweets</a> to download <em>pre-existing</em> tweets from the prior 7 days matching a given query. You can use any word or hashtag, capitalization does not matter in this case. If you search for a phrase (that includes spaces between words), enclose it within quotes, i.e. “climate strike”. The 7 day window is imposed by Twitter’s search API. To collect tweets as they happen in real time, use the filter command.</p>
+
+<p>Type the following into your command prompt and press enter:</p>
+
+<p><code>twarc search <span style="color:blue">blacklivematter</span> &gt; <span style="color:blue">tweets</span>.jsonl</code></p>
+
+<ul>
+  <li>
+    <p>Your collection may take some time to return all tweets. You can tell when the process has completed if your terminal has returned to the shell ($) prompt:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twarc-search.png" alt="Screen shot of twarc search command" /></p>
+  </li>
+  <li>
+    <p>While the prompt is running, check to make sure your command was successful by looking inside the twarc folder. Inside you should see your tweets.jsonl file and a twarc.log file (You don’t need to open these files, just make sure they’ve been created.):</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-data-folder.png" alt="Screen shot of twarc log files" /></p>
+  </li>
+  <li>
+    <p>You can stop the process at any time by entering <strong>Ctrl + C</strong>, but to get the entire collection for your search query, you must keep the process running until it completes.</p>
+  </li>
+</ul>
+
+<h3 id="more-search-examples">More Search Examples</h3>
+
+<p>Search for tweets from a single user:
+twarc search from:aoc &gt; tweets_aoc.jsonl
+The best way to get familiar with Twitter’s search syntax is to experiment with Twitter’s Advanced Search and copy and pasting the resulting query from the search box. 
+For example, here is a more complicated query that searches for tweets containing either the words climate or action and the hashtag #NewGreenDeal that were sent to @aoc:</p>
+
+<p>For this advanced search query, copy/paste the search box query, contained between two single quotes (‘’) into the twarc search command:
+twarc search ‘(climate OR action) (#greennewdeal) (to:aoc)’ &gt; tweets.jsonl
+For more on using the Twarc search command, see the Search section of DocNow’s Twarc Usage guide.</p>
+
+<h3 id="filter">Filter</h3>
+
+<p>The filter command will use Twitter’s statuses/filter API to collect tweets as they happen. Type the following into your command prompt and press enter:
+twarc filter climatestrike &gt; tweets.jsonl
+The filter command will run as long as you let it. You may need a designated computer to run this process without interruption, depending on how long you want to collect tweets for a given query. 
+End the process by entering Ctrl + C.
+To collect tweets from a given user id as they happen (this example is collecting tweets from @cnn, you can get an account’s user id using the Users twarc command below):
+twarc filter –follow 759251 &gt; tweets.jsonl
+Note that the syntax for the Twitter’s track queries is slightly different than what queries in their search API. Please consult the documentation on how best to express the filter option you are using. For more on using the Twarc filter command, see the Filter section of DocNow’s Twarc Usage guide.</p>
+
+<h3 id="users">Users</h3>
+
+<p>The users command will return User metadata for the given screen names:
+twarc users cnn &gt; users.jsonl
+You can also give it user ids:
+twarc users 1232134,1413213 &gt; users.jsonl
+You can also use a text file of user ids, which can be useful if you are using the followers and friends commands below:
+twarc users ids.txt &gt; users.jsonl</p>
+
+<h3 id="followers">Followers</h3>
+
+<p>The followers command will use Twitter’s follower id API to collect the follower user ids for exactly one user screen name per request as specified as an argument:
+twarc followers deray &gt; follower_ids.txt
+The result will include exactly one user id per line. The response order is reverse chronological, or most recent followers first.</p>
+
+<h3 id="friends">Friends</h3>
+
+<p>Like the followers command, the friends command will use Twitter’s friend id API to collect the friend user ids for exactly one user screen name per request as specified as an argument:
+twarc friends deray &gt; friend_ids.txt</p>
+
+<h3 id="dehydrated-and-rehydrated-data-sets">Dehydrated and Rehydrated Data Sets</h3>
+
+<p>Twitter API’s Terms of Service does not allow for making large amounts of raw Twitter data available on the Web. The fully-hydrated Twitter data you collect using Twarc can be used for research and archived for local use, but cannot be shared publicly. However, Twitter does allow files of tweet identifiers to be publicly shared. This is useful for when you would like to make a dataset of tweets available, for example, in DocNow’s Tweet Catalogue. This is referred to as a “dehydrated” data set - each tweet is reduced to its unique ID number, and a list of these IDs is saved as a text document.</p>
+
+<p>A dehydrated data set can be “rehydrated” using Twarc - Twitter will take each ID and search the current Twitterverse for a corresponding tweet. If it locates a tweet that matches the ID, it will return the original JSON code for that tweet. This process is called “rehydration”, and will return a JSON file containing the data for every tweet that it was able to locate. It’s important to note that any tweet rehydrator can only check for tweets that are currently live - they cannot find tweets that have been deleted or made private since the original collection event.</p>
+
+<h4 id="dehydrate-your-dataset">Dehydrate your Dataset</h4>
+
+<p>Each Tweet in your dataset has a unique identifier. Twarc’s dehydrate command will generate a list of tweet ids from a JSONL file of tweets. To dehydrate your tweets, enter the following command:
+        twarc dehydrate tweets.jsonl &gt; tweet_ids.txt
+You should now have a text file in your twarc folder containing the unique tweet ids of all tweets in your dataset:
+Open the .txt file to see the list of unique tweet ids:</p>
+
+<h4 id="rehydrate-a-dataset">Rehydrate a Dataset</h4>
+
+<p>Twarc’s hydrate command will read your file of unique identifiers and write out the tweet JSON for them using Twitter’s status/lookup API. This is useful if you have a set of Twitter ids from another institution and would like to view the full dataset. Documenting the Now has a collection of Tweet ids that you can explore and rehydrate here.
+Rehydrate your dataset by entering the following command:
+        twarc hydrate tweet_ids.txt &gt; tweets_hydrated.jsonl
+You now have your tweets in JSONL format ready to go in your twarc folder.</p>
+
+<h2 id="for-windows">For Windows</h2>
+
+<h3 id="search-1">Search</h3>
+<p>This uses Twitter’s search/tweets to download pre-existing tweets from the prior 7 days matching a given query. You can use any word or hashtag, capitalization does not matter in this case. If you search for a phrase (that includes spaces between words), enclose it within quotes, i.e. “climate strike”. The 7 day window is imposed by Twitter’s search API. To collect tweets as they happen in real time, use the filter command.</p>
+
+<p>Type the following into your command prompt and press enter: 
+twarc search climatestrike &gt; tweets.jsonl
+Your collection may take some time to return all tweets. You can tell when the process has completed if your terminal has returned to the shell prompt (C:):</p>
+
+<p>While the prompt is running, check to make sure your command was successful by looking inside the twarc folder. Inside you should see your tweets.jsonl file and a twarc.log file:</p>
+
+<p>You can stop the process at any time by entering Ctrl + C, but to get the entire collection for your search query, you must keep the process running until it completes.</p>
+<h3 id="more-search-examples-1">More Search Examples</h3>
+<p>Search for tweets from a single user:
+twarc search from:aoc &gt; tweets_aoc.jsonl
+The best way to get familiar with Twitter’s search syntax is to experiment with Twitter’s Advanced Search and copy and pasting the resulting query from the search box. 
+For example, here is a more complicated query using Advanced Search that searches for tweets containing either the words climate or action and the hashtag #NewGreenDeal that were sent to @aoc:</p>
+
+<p>For this advanced search query, copy/paste the search box query, contained between two single quotes (‘’) into the twarc search command:
+twarc search ‘(climate OR action) (#greennewdeal) (to:aoc)’ &gt; tweets.jsonl
+For more on using the Twarc search command, see the Search section of DocNow’s Twarc Usage guide.</p>
+<h3 id="filter-1">Filter</h3>
+<p>The filter command will use Twitter’s statuses/filter API to collect tweets as they happen. Type the following into your command prompt and press enter:
+twarc filter climatestrike &gt; tweets.jsonl
+The filter command will run as long as you let it. You may need a designated computer to run this process without interruption, depending on how long you want to collect tweets for a given query. 
+End the process by entering Ctrl + C.
+To collect tweets from a given user id as they happen (this example is collecting tweets from @cnn, you can get an account’s user id using the Users twarc command below):
+twarc filter –follow 759251 &gt; tweets.jsonl
+Note that the syntax for the Twitter’s track queries is slightly different than what queries in their search API. Please consult the documentation on how best to express the filter option you are using. For more on using the Twarc filter command, see the Filter section of DocNow’s Twarc Usage guide.</p>
+<h3 id="users-1">Users</h3>
+<p>The users command will return User metadata for the given screen names:
+twarc users cnn &gt; users.jsonl
+You can also give it user ids:
+twarc users 1232134,1413213 &gt; users.jsonl
+You can also use a text file of user ids, which can be useful if you are using the followers and friends commands below:
+twarc users ids.txt &gt; users.jsonl</p>
+<h3 id="followers-1">Followers</h3>
+<p>The followers command will use Twitter’s follower id API to collect the follower user ids for exactly one user screen name per request as specified as an argument:
+twarc followers deray &gt; follower_ids.txt
+The result will include exactly one user id per line. The response order is reverse chronological, or most recent followers first.</p>
+<h3 id="friends-1">Friends</h3>
+<p>Like the followers command, the friends command will use Twitter’s friend id API to collect the friend user ids for exactly one user screen name per request as specified as an argument:
+twarc friends deray &gt; friend_ids.txt</p>
+<h3 id="dehydrated-and-rehydrated-data-sets-1">Dehydrated and Rehydrated Data Sets</h3>
+<p>Twitter API’s Terms of Service does not allow for making large amounts of raw Twitter data available on the Web. The fully-hydrated Twitter data you collect using Twarc can be used for research and archived for local use, but cannot be shared publicly. However, Twitter does allow files of tweet identifiers to be publicly shared. This is useful for when you would like to make a dataset of tweets available, for example, in DocNow’s Tweet Catalogue. This is referred to as a “dehydrated” data set - each tweet is reduced to its unique ID number, and a list of these IDs is saved as a text document. 
+A dehydrated data set can be “rehydrated” using Twarc - Twitter will take each ID and search the current Twitterverse for a corresponding tweet. If it locates a tweet that matches the ID, it will return the original JSON code for that tweet. This process is called “rehydration”, and will return a JSON file containing the data for every tweet that it was able to locate. It’s important to note that any tweet rehydrator can only check for tweets that are currently live - they cannot find tweets that have been deleted or made private since the original collection event.</p>
+<h4 id="dehydrate-your-dataset-1">Dehydrate your Dataset</h4>
+<p>Each Tweet in your dataset has a unique identifier. Twarc’s dehydrate command will generate a list of tweet ids from a JSONL file of tweets. To dehydrate your tweets, enter the following command:
+twarc dehydrate tweets.jsonl &gt; tweet_ids.txt
+You should now have a text file in your twarc folder containing the unique tweet ids of all tweets in your dataset.
+Open the .txt file to see the list of unique tweet ids:</p>
+
+<h4 id="rehydrate-a-dataset-1">Rehydrate a Dataset</h4>
+<p>Twarc’s hydrate command will read your file of unique identifiers and write out the tweet JSON for them using Twitter’s status/lookup API. This is useful if you have a set of Twitter ids from another institution and would like to view the full dataset. DocNow has a collection of Tweet ids that you can explore and rehydrate here.
+Rehydrate your dataset by entering the following command:
+twarc hydrate tweet_ids.txt &gt; tweets_hydrated.jsonl
+You now have your tweets in JSONL format ready to go in your twarc folder.</p>
+
+
+</div>
+
+    </div>
+
+  </body>
+</html>

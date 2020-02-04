@@ -1,17 +1,11 @@
 ---
-layout: page
+layout: default
 title: About
 ---
+# About
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This site was built to provide classroom materials and help support twarc users, thanks in part to a [Mellon Foundation](https://mellon.org/) grant.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+The included pages provide instructions on installing and using Twarc. Parts of this guide are subject to change with updates to Twitter's developers site, so please use this guide as a general guideline. For troubleshooting with Twarc, please contact the developers of [DocNow](https://www.docnow.io/), and join in conversation with the DocNow community of scholars, students, and archivists.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+For more information on Twarc or other DocNow tools, please visit their [site](https://www.docnow.io/).

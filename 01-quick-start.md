@@ -2,14 +2,15 @@
 layout: page
 title:  "Quickstart Guide"
 ---
+# Quickstart Guide
 
 [for MacOS](#twarc-for-mac-os) \| [for Windows](#twarc-for-windows)
 
 ## Before you Begin
 
-1. [Register a Twitter application]()  
-2. [Make sure you have Python installed]()
-3. [Learn some command line basics]()
+1. [Register a Twitter application]({{site.baseurl}}/02-twitter-setup)  
+2. [Make sure you have Python installed]({{site.baseurl}}/04-install-python)
+3. [Learn some command line basics]({{site.baseurl}}/03-command-line-basics)
 
 ## Twarc for Mac OS
 
