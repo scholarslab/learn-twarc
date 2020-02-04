@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Twitter Setup &middot; Learn Twarc!
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/learn-twarc/assets/css/poole.css">
+  <link rel="stylesheet" href="/learn-twarc/assets/css/syntax.css">
+  <link rel="stylesheet" href="/learn-twarc/assets/css/hyde.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/learn-twarcpublic/apple-touch-icon-144-precomposed.png"> -->
+                                 <!-- <link rel="shortcut icon" href="/learn-twarcpublic/favicon.ico"> -->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-dn">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/learn-twarc">
+          Learn Twarc!
+        </a>
+      </h1>
+      <p class="lead">Start using twarc for twitter data collection.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- <a class="sidebar-nav-item" href="/learn-twarc">Home</a> -->
+
+      
+
+      
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/01-quick-start.html">Quickstart Guide</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/learn-twarc/02-twitter-setup.html">Twitter Setup</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/learn-twarc/about.html">About</a>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+
+      <a class="sidebar-nav-item" href="https://www.docnow.io/">DocNow</a>
+      <!-- <a class="sidebar-nav-item" href="/archive/v.zip">Download</a> -->
+      <!-- <a class="sidebar-nav-item" href="">GitHub project</a> -->
+      <!-- <span class="sidebar-nav-item">Currently v</span> -->
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Twitter Setup</h1>
+  <h1 class="no_toc" id="setting-up-your-twitter-account-for-collecting">Setting up your Twitter Account for Collecting</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#steps-for-creating-a-twitter-application" id="markdown-toc-steps-for-creating-a-twitter-application">Steps for Creating a Twitter Application</a>    <ol>
+      <li><a href="#setting-up-a-twitter-developer-account" id="markdown-toc-setting-up-a-twitter-developer-account">Setting up a Twitter Developer Account</a></li>
+      <li><a href="#creating-a-twitter-app" id="markdown-toc-creating-a-twitter-app">Creating a Twitter App</a></li>
+      <li><a href="#accessing-keys-and-tokens" id="markdown-toc-accessing-keys-and-tokens">Accessing Keys and Tokens</a></li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="steps-for-creating-a-twitter-application">Steps for Creating a Twitter Application</h2>
+
+<p><em>Please note that these instructions may be subject to change with updates to Twitter. If the following steps and screenshots do not match precisely, please use this as a general guide, or contact <a href="https://www.docnow.io/" target="_blank">DocNow</a>.</em></p>
+
+<ol>
+  <li>
+    <p>If you do not have a twitter account, create one at <a href="https://twitter.com/" target="_blank">twitter.com</a>. A twitter account is required for access to twitter data.</p>
+  </li>
+  <li>
+    <p>Log into you twitter account to set-up and and authorize a twitter application. A Twitter application will let you download twitter data using Python.</p>
+
+    <p>Create an app at <a href="https://developer.twitter.com/en/apps" target="_blank">developer.twitter.com/en/apps</a></p>
+
+    <p>Following the above link should bring you to this page:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/developer-page.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+  <li>
+    <p>Click on ‘Create an App’</p>
+
+    <p>You may be prompted to create a Twitter developer account. Select ‘Apply’ and continue:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/developer-popup.png" alt="Screen shot of Twitter Developers Site popup" /></p>
+  </li>
+</ol>
+
+<h3 id="setting-up-a-twitter-developer-account">Setting up a Twitter Developer Account</h3>
+
+<p>If you already have a developer account set up, skip to <a href="#creating-a-twitter-app">Creating a Twitter App</a>.</p>
+
+<ol>
+  <li>
+    <p>Select a user profile to associate with the developer account, and select ‘Continue’.</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/select-account.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+  <li>
+    <p>In the ‘Account details’ section, select your request for access for either your organization or for personal use.</p>
+
+    <p><strong>Note:</strong> Selecting “for my own personal use” offers the simplest and quickest method of setting up a developer account. If you are following this guide for research or teaching purposes, an individual, personal account is suggested. Twitter users can only have a single development account, and cannot change account types. An ‘Organization’ account differs in that it allows for additional twitter users to share access on a single dev account, however, this is mainly geared toward commercial use and is intended for development for premium APIs ($), and is outside the scope of this guide. For more, see <a href="https://developer.twitter.com/en/docs/basics/developer-portal/faq.html" target="_blank">Twitter’s FAQ</a>.</p>
+
+    <ul>
+      <li>If you select “for my own personal use,” you will be prompted to fill in an Account Name and to select your Primary Country of Operation. Both are required.</li>
+    </ul>
+  </li>
+  <li>
+    <p>In the next section on ‘Use Case Details’, answer several questions about your project and why you are building an app to gather twitter data. You can provide answers similar to the ones below if relevant to your project. <strong>Most importantly note that this is for academic purposes and that you will not be Tweeting, Retweeting, or liking content.</strong></p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-use-case.png" alt="Screen shot of Twitter Developers Site" /></p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-use-case-4.png" alt="Screen shot of Twitter Developers Site" /></p>
+
+    <p><strong>Note:</strong> If your project does involve analysis of twitter content, an answer for question #2 might look something like “Yes, my project will analyze tweets using text analysis, word clouds, word frequency, and word association using R.”</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-use-case-5.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+  <li>
+    <p>Read and Accept the Twitter Terms of Service.</p>
+  </li>
+  <li>
+    <p>Verify your Twitter Development Account via the email associated with your Twitter account.</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-verify.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+</ol>
+
+<h3 id="creating-a-twitter-app">Creating a Twitter App</h3>
+
+<ol>
+  <li>
+    <p>Once you have your Twitter Developer Account set up, you can register an application at <a href="https://developer.twitter.com/en/apps" target="_blank">developer.twitter.com/en/apps</a>. Click ‘Create an App’ to begin:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/developer-page.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+  <li>
+    <p>Fill out the required parts of the form for App Details. For the Website URL, you can simply put the URL for your twitter account, or any website you are affiliated with:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-app-4.png" alt="Screen shot of Twitter Developers Site" /></p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-app-5.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+  <li>
+    <p>Click ‘Create’. A pop-up may appear for reviewing the Twitter Developer Terms, click ‘Create’ to continue.</p>
+  </li>
+  <li>
+    <p>You now have a registered Twitter app! You can edit any of these fields later from your <a href="https://developer.twitter.com/en/apps" target="_blank">Developer Account Apps page</a>.</p>
+  </li>
+</ol>
+
+<h3 id="accessing-keys-and-tokens">Accessing Keys and Tokens</h3>
+
+<ol>
+  <li>
+    <p>From your <a href="https://developer.twitter.com/en/apps" target="_blank">Developer Account Apps page</a>, find your app and click ‘Details’.</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-app-3.png" alt="Screen shot of Twitter Developers Site" /></p>
+  </li>
+  <li>
+    <p>Select the option for ‘Keys and Tokens’. On this page you will find your Consumer API keys. Under ‘Access token &amp; access token secret’, click ‘create’ to generate.</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-keys-1.png" alt="Screen shot of Twitter Developers Site" /></p>
+
+    <p>Note down for use with Twarc these four alphanumeric values:</p>
+    <ul>
+      <li>Consumer API key</li>
+      <li>Consumer API secret</li>
+      <li>Access token</li>
+      <li>Access token secret</li>
+    </ul>
+  </li>
+</ol>
+
+<p><em>Updated: April 25, 2019</em></p>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

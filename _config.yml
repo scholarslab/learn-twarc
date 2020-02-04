@@ -3,8 +3,8 @@ title: Learn Twarc!
 email: scholarslab@virginia.com
 description: >- # this means to ignore newlines until "baseurl:"
   Start using twarc for twitter data collection.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://scholarslab.github.io/learn-twarc/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/learn-twarc" # the subpath of your site, e.g. /blog
+url: "https://scholarslab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
