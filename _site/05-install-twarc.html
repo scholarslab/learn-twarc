@@ -121,15 +121,9 @@
       
         
       
-
-      <!-- <a class="sidebar-nav-item" href="https://www.docnow.io/">DocNow</a> -->
-      <!-- <a class="sidebar-nav-item" href="/archive/v.zip">Download</a> -->
-      <!-- <a class="sidebar-nav-item" href="">GitHub project</a> -->
-      <!-- <span class="sidebar-nav-item">Currently v</span> -->
     </nav>
 
-    <p><a href="/learn-twarc/about">About</a> | <a href="https://www.docnow.io/">DocNow</a></p>
-    <!-- <p>&copy; 2020. All rights reserved.</p> -->
+    <p><a style="font-size: 1rem;font-weight: 300;" href="https://www.docnow.io/">DocNow</a></p>
   </div>
 </div>
 
@@ -145,15 +139,12 @@
   <li><em><a href="/learn-twarc/02-twitter-setup#accessing-keys-and-tokens">Have your Twitter application API keys and tokens on hand</a></em></li>
 </ul>
 
-<p><a href="#twarc-for-mac-os">Twarc for MacOS</a> | <a href="#twarc-for-windows">Twarc for Windows</a></p>
-
-<h2 id="twarc-for-mac-os">Twarc for Mac OS</h2>
-<p><em>For Windows users, click <a href="#twarc-for-windows">here</a></em></p>
-
 <h3 id="installing-twarc">Installing Twarc</h3>
 
 <ol>
-  <li>Open the Terminal application (located in the applications folder).</li>
+  <li>
+    <p>Open the Terminal application (MacOS users), or Command Prompt (Windows users, Windows PowerShell is another option).</p>
+  </li>
   <li>
     <p>Pip install Twarc by entering the following command:</p>
 
@@ -162,7 +153,7 @@
 
     <p><em>Note: <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">Pip</a> is already installed if you are using Python 2 ≥ 2.7.9 or Python 3 ≥ 3.4</em></p>
 
-    <p>macOS users may also have the option of installing Twarc via homebrew using the command:</p>
+    <p>MacOS users may also have the option of installing Twarc via homebrew using the command:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install twarc
 </code></pre></div>    </div>
@@ -181,7 +172,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Twarc will ask you to enter several keys. You should have these keys ready to go after <a href="/learn-twarc/02-twitter-setup#accessing-keys-and-tokens">registering an application</a>.</p>
+    <p>Twarc will ask you to enter several keys. Get your <a href="/learn-twarc/02-twitter-setup#accessing-keys-and-tokens">Keys and Tokens</a> from your registered Twitter app.</p>
 
     <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twarc-config.png" alt="Screen shot of twarc configuration" /></p>
 
@@ -202,58 +193,7 @@
   </li>
 </ol>
 
-<p>Next, learn the basics of collecting twitter data: <a href="">Twarc Command Basics</a></p>
-
-<h2 id="twarc-for-windows">Twarc for Windows</h2>
-
-<h3 id="installing-twarc-1">Installing Twarc</h3>
-
-<ol>
-  <li>Open the Command Prompt program (Windows PowerShell is another option).</li>
-  <li>
-    <p>Pip install Twarc by entering the following command:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install twarc
-</code></pre></div>    </div>
-
-    <p><em>Note: <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">Pip</a> is already installed if you are using Python 2 ≥ 2.7.9 or Python 3 ≥ 3.4</em></p>
-  </li>
-</ol>
-
-<h3 id="configuring-twarc-1">Configuring Twarc</h3>
-
-<p>To get started, you will need to tell Twarc about your application API keys and grant access to one or more Twitter accounts. Follow these directions to configure Twarc:</p>
-
-<ol>
-  <li>
-    <p>Enter the following command in you command line:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>twarc configure
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Twarc will ask you to enter several keys. You should have these keys ready to go after <a href="/learn-twarc/02-twitter-setup#accessing-keys-and-tokens">registering an application</a>.</p>
-
-    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twarc-config.png" alt="Screen shot of twarc configuration" /></p>
-
-    <p>Type or copy/paste your consumer API key, then press <strong>enter</strong>. Next, Twarc will ask for your consumer secret. Type or copy/paste your consumer API secret, then press <strong>enter</strong>.</p>
-  </li>
-  <li>
-    <p>Next, Twarc will ask you to log into your twitter account. Copy/paste the provided URL into your browser to authorize your application.</p>
-  </li>
-  <li>
-    <p>Following the provided URL will bring you to a page that looks something like this:</p>
-
-    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twitter-authorize.png" alt="Screen shot of twitter authorize page" /></p>
-
-    <p>Click Authorize app. A pin number will be provided. Type this pin into your terminal where requested, then press <strong>enter</strong>.</p>
-  </li>
-  <li>
-    <p>After entering your pin, your terminal should give a message telling you where your twitter credentials are saved, followed by “Happy twarcing!” This means your twarc installation is configured.</p>
-  </li>
-</ol>
-
-<p>Next, learn the basics of collecting twitter data: <a href="">Twarc Command Basics</a></p>
+<p>Next, learn the basics of collecting twitter data: <a href="/learn-twarc/03-command-line-basics">Twarc Command Basics</a></p>
 
 </div>
 

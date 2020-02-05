@@ -5,7 +5,7 @@ title: Command Line Basics
 
 # Command Line Basics
 
-Twarc requires familiarity with using the command line to navigate your file system, configure twarc, and run queries. We've provided some very quick practice to get comfortable with the command line.
+Twarc requires familiarity with using the command line to navigate your file system, configure twarc, and run queries. We've provided some quick practice to get help you gain comfort with the command line.
 
 [for MacOS](#practice-with-command-line-for-mac-os) \| [for Windows](#practice-with-command-line-for-windows)
 
