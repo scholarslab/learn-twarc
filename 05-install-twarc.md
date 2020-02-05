@@ -47,4 +47,4 @@ To get started, you will need to tell Twarc about your application API keys and 
 
 5. After entering your pin, your terminal should give a message telling you where your twitter credentials are saved, followed by "Happy twarcing!" This means your twarc installation is configured. 
 
-Next, learn the basics of collecting twitter data: [Twarc Command Basics]({{site.baseurl}}/03-command-line-basics)
+Next, learn the basics of collecting twitter data: [Twarc Command Basics]({{site.baseurl}}/06-twarc-command-basics)
