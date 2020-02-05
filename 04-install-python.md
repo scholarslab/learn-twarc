@@ -5,7 +5,7 @@ title: Install Python
 
 # Python Installation Guide
 
-[for MacOS](#python-for-mac-os) \| [for Windows](#python-for-windows)
+### [for MacOS](#python-for-mac-os) \| [for Windows](#python-for-windows)
 
 ## Python for Mac OS
 

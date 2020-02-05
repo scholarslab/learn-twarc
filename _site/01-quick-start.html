@@ -133,9 +133,7 @@
   <!-- <h1 class="page-title">Quickstart Guide</h1> -->
   <h1 id="quickstart-guide">Quickstart Guide</h1>
 
-<p><a href="#twarc-for-mac-os">for MacOS</a> | <a href="#twarc-for-windows">for Windows</a></p>
-
-<h2 id="before-you-begin">Before you Begin</h2>
+<h2 id="before-you-begin">Before you begin</h2>
 
 <ol>
   <li><a href="/learn-twarc/02-twitter-setup">Register a Twitter application</a></li>
@@ -143,42 +141,34 @@
   <li><a href="/learn-twarc/03-command-line-basics">Learn some command line basics</a></li>
 </ol>
 
-<h2 id="twarc-for-mac-os">Twarc for Mac OS</h2>
-
-<p><em>For Windows users, click <a href="#twarc-for-windows">here</a></em></p>
-
-<h3 id="installing-twarc">Installing Twarc</h3>
+<h2 id="start-twarcing">Start twarcing</h2>
 
 <ol>
-  <li>Open the Terminal application (located in the applications folder)</li>
   <li>
-    <p>Pip install Twarc by entering the following command:</p>
+    <p>Open the Terminal application (MacOS users), or Command Prompt (Windows users), and <a href="/learn-twarc/03-command-line-basics">navigate</a> into the directory where you want to save your tweet data.</p>
+  </li>
+  <li>
+    <p>pip <a href="/learn-twarc/05-install-twarc">install</a> twarc by entering the following command:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install twarc
 </code></pre></div>    </div>
 
-    <p><em>Note: <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">Pip</a> is already installed if you are using Python 2 ≥ 2.7.9 or Python 3 ≥ 3.4</em></p>
-
-    <p>macOS users also have the option of installing Twarc via homebrew using the command:</p>
+    <p>MacOS users may also have the option of installing twarc via homebrew using the command:</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install twarc
 </code></pre></div>    </div>
   </li>
-</ol>
-
-<h2 id="twarc-for-windows">Twarc for Windows</h2>
-
-<h3 id="installing-twarc-1">Installing Twarc</h3>
-
-<ol>
-  <li>Open PowerShell (to open PowerShell, use the taskbar to search for PowerShell and select ‘Windows PowerShell’)</li>
   <li>
-    <p>Pip install Twarc by entering the following command:</p>
+    <p>Grant twarc access to your twitter account using your application’s <a href="/learn-twarc/02-twitter-setup#accessing-keys-and-tokens">API keys</a>:</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install twarc
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> twarc configure
 </code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Use twarc to <a href="/learn-twarc/06-twarc-command-basics#search">search</a> for tweets:</p>
 
-    <p><em>Note: <a href="https://pip.pypa.io/en/stable/installing/" target="_blank">Pip</a> is already installed if you are using Python 2 ≥ 2.7.9 or Python 3 ≥ 3.4</em></p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> twarc search climatestrike &gt; tweets.jsonl
+</code></pre></div>    </div>
   </li>
 </ol>
 

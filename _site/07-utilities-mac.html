@@ -213,7 +213,7 @@ Id, tweet_url, created_at, parsed_created_at, user_screen_name, text, tweet_type
 
 <p>Output: Creates a text file with all emojis and number count</p>
 
-<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/emoji.png" alt="Screenshot of emoji txt file" /></p>
+<p><img src="http://localhost:4000/learn-twarc/assets/images/emoji.png" alt="Screenshot of emoji txt file" /></p>
 
 <h2 id="wordcloud">Wordcloud</h2>
 
@@ -223,7 +223,7 @@ Id, tweet_url, created_at, parsed_created_at, user_screen_name, text, tweet_type
 
 <p>Output: Creates an html file, open in your browser to see wordcloud.</p>
 
-<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/wordcloud.png" alt="Screenshot of wordcloud" /></p>
+<p><img src="http://localhost:4000/learn-twarc/assets/images/wordcloud.png" alt="Screenshot of wordcloud" /></p>
 
 <p><em>Note on wordclouds:</em> Consider <a href="#remove-retweets-from-jsonl">removing retweets</a> from your dataset when creating your wordcloud. With retweets included, the text from the original tweet is shortened in the dataset, and can create odd/deceptive wordclouds.</p>
 
@@ -236,8 +236,8 @@ Id, tweet_url, created_at, parsed_created_at, user_screen_name, text, tweet_type
       <td>After retweets removed:</td>
     </tr>
     <tr>
-      <td><img src="https://scholarslab.github.io/learn-twarc/assets/images/wordcloud-1.png" alt="Screenshot of wordcloud" /></td>
-      <td><img src="https://scholarslab.github.io/learn-twarc/assets/images/wordcloud-2.png" alt="Screenshot of wordcloud" /></td>
+      <td><img src="http://localhost:4000/learn-twarc/assets/images/wordcloud-1.png" alt="Screenshot of wordcloud" /></td>
+      <td><img src="http://localhost:4000/learn-twarc/assets/images/wordcloud-2.png" alt="Screenshot of wordcloud" /></td>
     </tr>
   </tbody>
 </table>
@@ -251,11 +251,11 @@ Id, tweet_url, created_at, parsed_created_at, user_screen_name, text, tweet_type
 
 <p>Output: Creates an html file, open in your browser to view the network graph of your tweets. This script only shows a graph of original tweets that have been quoted and/or have replies (not the entire dataset). Hover over circles to show connections, click to show tweet (if you click and no tweet appears, it was likely deleted or set private)</p>
 
-<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-network.png" alt="Screenshot of tweet network" /></p>
+<p><img src="http://localhost:4000/learn-twarc/assets/images/tweet-network.png" alt="Screenshot of tweet network" /></p>
 
 <p>To <strong>include retweets</strong> in your network graph, use the following command (if you have a very large dataset, this will take a long time to load, and may be too crowded to read well):</p>
 
-<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-network-retweets.png" alt="Screenshot of tweet network w retweets" /></p>
+<p><img src="http://localhost:4000/learn-twarc/assets/images/tweet-network-retweets.png" alt="Screenshot of tweet network w retweets" /></p>
 
 <p><code>utils/tweet_network.py --retweets <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code></p>
 
@@ -279,7 +279,7 @@ Id, tweet_url, created_at, parsed_created_at, user_screen_name, text, tweet_type
 
 <p>Output: Creates an html file, open in your browser to view all tweets, easy to browse through.</p>
 
-<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-wall.png" alt="Screenshot of tweet wall" /></p>
+<p><img src="http://localhost:4000/learn-twarc/assets/images/tweet-wall.png" alt="Screenshot of tweet wall" /></p>
 
 <h2 id="media-urls">Media URLs</h2>
 <p>Creates a text file the URLs of images uploaded to Twitter in a tweet json. Use the following command:</p>
