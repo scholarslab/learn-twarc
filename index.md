@@ -8,7 +8,9 @@ layout: default
 project. In addition to letting you collect tweets, twarc can also help you
 collect users, trends and hydrate tweet ids.
 
-The included pages provide step-by-step tutorials on installing and using twarc, for both Windows and Mac users. Parts of this guide are subject to change with updates to Twitter developer terms, so please use this guide as a general guideline. For troubleshooting with twarc, please contact the developers of [DocNow](https://www.docnow.io/), and join in conversation with the DocNow community of scholars, students, and archivists.
+The included pages provide step-by-step tutorials on installing and using twarc, for both Windows and Mac users. Parts of this guide are subject to change with updates to Twitter developer terms, so please use this guide as a general guideline. 
+
+For troubleshooting with twarc, please contact the developers of [DocNow](https://www.docnow.io/), and join in conversation with the DocNow community of scholars, students, and archivists.
 
 ## How do I get started?
 
@@ -17,7 +19,7 @@ The included pages provide step-by-step tutorials on installing and using twarc,
 - Start collecting tweets with the [**Quickstart Guide**.]({{site.baseurl}}/01-quick-start)
 
 - Learn more [**basic twarc commands**.]({{site.baseurl}}/06-twarc-command-basics)
-- After you've collected some tweets, use the [**twarc utlities**]({{site.baseurl}}/07-twarc-utilites) to further explore your data.
+- After you've collected some tweets, use the [**twarc utilities**]({{site.baseurl}}/07-twarc-utilites) to further explore your data.
 
 - Unfamiliar with the command line or need a quick refresh? [**Practice some command line basics.**]({{site.baseurl}}/03-command-line-basics)
 
