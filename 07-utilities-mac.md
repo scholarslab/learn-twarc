@@ -72,7 +72,7 @@ To see a list of all emojis in the dataset, use the following command:
 
 <code>utils/emojis.py <span style="color:blue">tweets</span>.jsonl > <span style="color:blue">tweets</span>.txt</code>
 
-Output: Creates a text file with all emojis and number count
+Output: Creates a text file with all emojis and number count:
 
 ![Screenshot of emoji txt file]({{ site.url }}{{ site.baseurl }}/assets/images/emoji.png)
 
@@ -106,11 +106,11 @@ Output: Creates an html file, open in your browser to view the network graph of 
 
 To **include retweets** in your network graph, use the following command (if you have a very large dataset, this will take a long time to load, and may be too crowded to read well):
 
-![Screenshot of tweet network w retweets]({{ site.url }}{{ site.baseurl }}/assets/images/tweet-network-retweets.png)
-
 <code>utils/tweet_network.py --retweets <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code>
 
 Output: an html file of your network graph, including retweets. Open in browser:
+
+![Screenshot of tweet network w retweets]({{ site.url }}{{ site.baseurl }}/assets/images/tweet-network-retweets.png)
 
 ## Create Geojson
 Use the following command: 
@@ -118,7 +118,8 @@ Use the following command:
 <code>utils/geojson.py <span style="color:blue">tweets</span>.jsonl > <span style="color:blue">tweets</span>.geojson</code>
 
 Output: Creates a .geojson file. Quickly create map from geojson file:
-- [Geojson.io](http://geojson.io)
+- [Geojson.io](http://geojson.io): Drag and Drop your geojson file into the </>JSON left panel to create map:
+    ![Screenshot of geojson.io map]({{ site.url }}{{ site.baseurl }}/assets/images/geojson.png)
 - With a github account, logged in: [https://gist.github.com/](https://gist.github.com/), drag geojson file into browser window, and save gist. Will automatically make into a map
 
 ## Tweet Wall
