@@ -11,7 +11,7 @@
 
   <title>
     
-       &middot; Learn Twarc!
+      Twarc Utilities &middot; Learn Twarc!
     
   </title>
 
@@ -97,7 +97,7 @@
       
         
           
-            <a class="sidebar-nav-item" href="/learn-twarc/07-twarc-utilities.html">Twarc Utilities</a>
+            <a class="sidebar-nav-item active" href="/learn-twarc/07-twarc-utilities.html">Twarc Utilities</a>
           
         
       
@@ -135,20 +135,49 @@
 
 
     <div class="content container">
-      <h1 id="learn-twarc">Learn Twarc</h1>
+      <div class="page">
+  <!-- <h1 class="page-title">Twarc Utilities</h1> -->
+  <h1 id="twarc-utilities">Twarc Utilities</h1>
 
-<h2 id="from-documenting-the-now">From Documenting the Now</h2>
+<p>Twarc comes with a set utilities that will help you explore the data you’ve collected. To begin, first <a href="#get-the-utilities-from-github">download the utilities folder from github</a>. Then, select the relevant utilities guide:</p>
+<h3 id="for-macos--for-windows"><a href="/learn-twarc/07-utilities-mac">for MacOS</a> | <a href="/learn-twarc/07-utilities-windows">for Windows</a></h3>
 
-<p>twarc is a command line tool and Python library for archiving Twitter JSON data.
-Each tweet is represented as a JSON object that is
-<a href="https://dev.twitter.com/overview/api/tweets">exactly</a> what was returned from
-the Twitter API.  Tweets are stored as <a href="https://en.wikipedia.org/wiki/JSON_Streaming#Line-delimited_JSON">line-oriented JSON</a>.  Twarc will handle
-Twitter API’s <a href="https://dev.twitter.com/rest/public/rate-limiting">rate limits</a>
-for you. In addition to letting you collect tweets Twarc can also help you
-collect users, trends and hydrate tweet ids.</p>
+<hr />
 
-<p>twarc was developed as part of the <a href="http://www.docnow.io">Documenting the Now</a>
-project which was funded by the <a href="https://mellon.org/">Mellon Foundation</a>.</p>
+<h2 id="get-the-utilities-from-github">Get the Utilities from Github</h2>
+
+<ol>
+  <li>
+    <p>Go to the DocNow Twarc Github page: <a href="https://github.com/DocNow/twarc" target="_blank">https://github.com/DocNow/twarc</a></p>
+  </li>
+  <li>
+    <p>Find and click on the green button towards the right side of the page that says <strong>Clone or download</strong>:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twarc-github.png" alt="Screenshot of github clone button" /></p>
+  </li>
+  <li>
+    <p>Download and unzip the compressed folder to your computer: click <strong>Download ZIP</strong> from the drop-down options. (Use git clone if familiar)</p>
+  </li>
+  <li>
+    <p>Navigate to the location on your computer where you want to download the Twarc folder and click save. Save to your desktop for easy access.</p>
+  </li>
+  <li>
+    <p>Open the folder location and unzip the compressed folder to access the contents.</p>
+  </li>
+  <li>
+    <p>Inside you will find a folder labeled <strong>utils</strong>. Copy or move this entire folder into the folder where you’ve saved your twitter json files:</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twarc-utils.png" alt="Screenshot of twarc folder with utils" /></p>
+
+    <p>The <strong>utils</strong> folder has a bunch of python (.py) files inside. You don’t need to directly open these files, unless you’re familiar with python and want to explore them further.</p>
+
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/twarc-utils-2.png" alt="Screenshot of twarc folder with utils" /></p>
+  </li>
+</ol>
+
+<p>For the purposes of this tutorial, all you need to do is make sure the JSONL file of collected tweet data you want to use is in the same folder as the utils folder (but not inside this utils folder, see screenshot above for an example).</p>
+
+</div>
 
     </div>
 

@@ -1,27 +1,11 @@
 ---
-layout: page
-title: Twarc Command Basics
+layout: default
+title: Twarc Usage Guide for MacOS
 ---
-
-# Start Collecting: Twarc Command Basics
+# Twarc Usage Guide for MacOs
 {: .no_toc }
 
-Let’s start collecting tweets! Consider using a spreadsheet to keep track of the datasets you create using Twarc. You can use this [Collection Template](https://docs.google.com/spreadsheets/d/1FJ-wdIXZWcA8OTc1A9xtkVrho6FZ8TwkdVpbaoK4CRA/edit?usp=sharing){:target="_blank"} to get started. Click on the [template link](https://docs.google.com/spreadsheets/d/1FJ-wdIXZWcA8OTc1A9xtkVrho6FZ8TwkdVpbaoK4CRA/edit?usp=sharing){:target="_blank"} to open, select File > Make a Copy to create an editable document in your Google Drive. 
-
-## Using Twarc: A Typical Workflow
-{: .no_toc }
-
-Each time you use twarc to collect twitter data, start here:
-1. **Use the command line to navigate into your twarc folder**
-    - **Open** the Terminal application (MacOS users), or Command Prompt (Windows users) 
-    - **Navigate** into the twarc folder on your desktop, or another folder where you want to save your twitter data, using the [`cd` **change directory** command]({{site.baseurl}}/03-command-line-basics). In your shell prompt, type in `cd` followed by the path of your twarc folder, then press enter.
-2. **Start Twarcing!**
-    - **Enter** the twarc commands into your command line, following the detailed usage guides below. 
-    <!-- - **Usage Guides:** [for MacOS]({{site.baseurl}}/06-usage-mac) \| [for Windows]({{site.baseurl}}/06-usage-windows) -->
-
-## Twarc Usage Guide:
-{: .no_toc }
-<!-- ### [for MacOS]({{site.baseurl}}/06-usage-mac) \| [for Windows]({{site.baseurl}}/06-usage-windows) -->
+**This guide is optimized for Mac users** (tutorial for Windows users [here]({{site.baseurl}}/06-usage-windows)).
 
 For the following twarc lessons, all <code><span style="color:blue">blue text</span></code> can be modified to fit your purpose. These are either file names or search/filter terms. 
 
