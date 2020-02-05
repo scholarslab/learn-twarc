@@ -16,10 +16,10 @@ Each time you use twarc to collect twitter data, start here:
     - **Open** the Terminal application (MacOS users), or Command Prompt (Windows users) 
     - **Navigate** into the twarc folder on your desktop, or another folder where you want to save your twitter data, using the [`cd` **change directory** command]({{site.baseurl}}/03-command-line-basics). In your shell prompt, type in `cd` followed by the path of your twarc folder, then press enter.
 2. **Start Twarcing!**
-    - **Enter** the twarc commands into your command line, following the detailed usage guides below. 
+    - **Enter** the twarc commands into your command line, following the detailed usage guide below. 
     <!-- - **Usage Guides:** [for MacOS]({{site.baseurl}}/06-usage-mac) \| [for Windows]({{site.baseurl}}/06-usage-windows) -->
 
-## Twarc Usage Guide:
+## Twarc Usage Guide
 {: .no_toc }
 <!-- ### [for MacOS]({{site.baseurl}}/06-usage-mac) \| [for Windows]({{site.baseurl}}/06-usage-windows) -->
 
@@ -36,11 +36,11 @@ Use the Table of Contents below to quickly navigate this guide.
 ---
 
 ## Search
-This uses Twitter's [search/tweets](https://developer.twitter.com/en/docs/api-reference-index) to download _pre-existing_ tweets from the prior 7 days matching a given query. You can use any word or hashtag, capitalization does not matter in this case. If you search for a phrase (that includes spaces between words), enclose it within quotes, i.e. “climate strike”. The 7 day window is imposed by Twitter’s search API. To collect tweets as they happen in real time, use the filter command.
+This uses Twitter's [search/tweets](https://developer.twitter.com/en/docs/api-reference-index) API to download _pre-existing_ tweets from the prior 7 days matching a given query. You can use any word or hashtag, capitalization does not matter in this case. If you search for a phrase (that includes spaces between words), enclose it within quotes, i.e. “climate strike”. The 7 day window is imposed by Twitter’s search API. To collect tweets as they happen in real time, use the [filter](#filter) command.
  
 Type the following into your command prompt and press enter: 
 
-<code>twarc search <span style="color:blue">blacklivematter</span> > <span style="color:blue">tweets</span>.jsonl</code>
+<code>twarc search <span style="color:blue">blacklivesmatter</span> > <span style="color:blue">tweets</span>.jsonl</code>
 
 - Your collection may take some time to return all tweets. You can tell when the process has completed if your terminal has returned to the shell ($) prompt:
 
@@ -50,7 +50,7 @@ Type the following into your command prompt and press enter:
 
     ![Screen shot of twarc log files]({{ site.url }}{{ site.baseurl }}/assets/images/tweet-data-folder.png)
 
-- You can stop the process at any time by entering **Ctrl + C**, but to get the entire collection for your search query, you must keep the process running until it completes. 
+- You can stop the process at any time by entering **Ctrl + C**, but to get the entire collection for your search query, you must keep the process running without interruption until it completes. 
 
 ## More Search Examples
 
@@ -128,7 +128,7 @@ Each Tweet in your dataset has a unique identifier. Twarc’s dehydrate command 
 - You should now have a text file in your twarc folder containing the unique tweet ids of all tweets in your dataset.
 - Open the .txt file to see the list of unique tweet ids:
 
-![Screen shot of tweet ids txt file]({{ site.url }}{{ site.baseurl }}/assets/images/tweet-ids.png)
+    ![Screen shot of tweet ids txt file]({{ site.url }}{{ site.baseurl }}/assets/images/tweet-ids.png)
 
 
 ### Rehydrate a Dataset

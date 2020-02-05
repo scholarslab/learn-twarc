@@ -141,8 +141,190 @@
 
 <h3 class="no_toc" id="table-of-contents">Table of contents</h3>
 
+<ol id="markdown-toc">
+  <li><a href="#tweet-count" id="markdown-toc-tweet-count">Tweet Count</a></li>
+  <li><a href="#convert-json-to-csv" id="markdown-toc-convert-json-to-csv">Convert JSON to CSV</a></li>
+  <li><a href="#users" id="markdown-toc-users">Users</a></li>
+  <li><a href="#hashtags" id="markdown-toc-hashtags">Hashtags</a></li>
+  <li><a href="#emojis" id="markdown-toc-emojis">Emojis</a></li>
+  <li><a href="#wordcloud" id="markdown-toc-wordcloud">Wordcloud</a></li>
+  <li><a href="#tweet-network-graph" id="markdown-toc-tweet-network-graph">Tweet Network Graph</a></li>
+  <li><a href="#create-geojson" id="markdown-toc-create-geojson">Create Geojson</a></li>
+  <li><a href="#tweet-wall" id="markdown-toc-tweet-wall">Tweet Wall</a></li>
+  <li><a href="#media-urls" id="markdown-toc-media-urls">Media URLs</a></li>
+  <li><a href="#remove-retweets-from-jsonl" id="markdown-toc-remove-retweets-from-jsonl">Remove Retweets from JSONL</a></li>
+  <li><a href="#sort-tweets-chronologically" id="markdown-toc-sort-tweets-chronologically">Sort Tweets Chronologically</a></li>
+  <li><a href="#remove-tweets-before-certain-date" id="markdown-toc-remove-tweets-before-certain-date">Remove Tweets Before Certain Date</a></li>
+  <li><a href="#remove-duplicate-tweets" id="markdown-toc-remove-duplicate-tweets">Remove Duplicate Tweets</a></li>
+</ol>
 
 <hr />
+
+<h2 id="tweet-count">Tweet Count</h2>
+<p>To get the total number of tweets in your dataset, enter the command below (*thats a lower-case “L”, not a 1):</p>
+
+<p><code>wc -l <span style="color:blue">tweets</span>.jsonl</code></p>
+
+<h2 id="convert-json-to-csv">Convert JSON to CSV</h2>
+<p>Use the following command to create a csv file (spreadsheet):</p>
+
+<p><code>utils/json2csv.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets</span>.csv</code></p>
+
+<p>Output: Creates a .csv file with the following tweet attributes:
+Id, tweet_url, created_at, parsed_created_at, user_screen_name, text, tweet_type, coordinates, hashtags, media, urls, favorite_count, in_reply_to_screen_name, in_reply_to_status_id, in_reply_to_user_id, lang, place, possibly_sensitive, retweet_count, retweet_or_quote_id, retweet_or_quote_screen_name, retweet_or_quote_user_id, source, user_id, user_created_at, user_default_profile_image, user_description, user_favourites_count, user_followers_count, user_friends_count, user_listed_count, user_location, user_name, user_statuses_count, user_time_zone, user_urls, user_verified</p>
+
+<p>See the <a href="https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object">Tweet Data Dictionary</a> for a complete description of these attributes.</p>
+
+<h2 id="users">Users</h2>
+
+<p>To count the number of unique users in the dataset, enter the following command:</p>
+
+<p><code>utils/users.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">users</span>.txt</code></p>
+
+<p>This will create a text file listing all users in the dataset. To sort the unique users in the dataset by the number of tweets sent by users during the collection period:</p>
+
+<p><code>cat <span style="color:blue">users</span>.txt | sort | uniq -c | sort -n &gt; <span style="color:blue">users_sorted</span>.txt</code></p>
+
+<p>To find the total number of unique users counted:</p>
+
+<p><code>cat <span style="color:blue">users_sorted</span>.txt | wc -l</code></p>
+
+<p>To find the users with the most tweets in the collection:</p>
+
+<p><code>tail <span style="color:blue">users_sorted</span>.txt &gt; <span style="color:blue">users_top_ten</span>.txt</code></p>
+
+<h2 id="hashtags">Hashtags</h2>
+<p>To to get a list of all the unique hashtags used in the dataset, enter the following command:</p>
+
+<p><code>utils/tags.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets_hashtags</span>.txt</code></p>
+
+<p>To get the total number of unique hashtags used in the dataset:</p>
+
+<p><code>cat <span style="color:blue">tweets_hashtags</span>.txt | wc -l</code></p>
+
+<p>To find the top ten hashtags used in the dataset:</p>
+
+<p><code>head <span style="color:blue">tweets_hashtags</span>.txt &gt; <span style="color:blue">hashtags_top_ten</span>.txt</code></p>
+
+<h2 id="emojis">Emojis</h2>
+<p>To see a list of all emojis in the dataset, use the following command:</p>
+
+<p><code>utils/emojis.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets</span>.txt</code></p>
+
+<p>Output: Creates a text file with all emojis and number count</p>
+
+<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/emoji.png" alt="Screenshot of emoji txt file" /></p>
+
+<h2 id="wordcloud">Wordcloud</h2>
+
+<p>To create a wordcloud, use the following command (<em>see note below</em>):</p>
+
+<p><code>utils/wordcloud.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">wordcloud</span>.html</code></p>
+
+<p>Output: Creates an html file, open in your browser to see wordcloud.</p>
+
+<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/wordcloud.png" alt="Screenshot of wordcloud" /></p>
+
+<p><em>Note on wordclouds:</em> Consider <a href="#remove-retweets-from-jsonl">removing retweets</a> from your dataset when creating your wordcloud. With retweets included, the text from the original tweet is shortened in the dataset, and can create odd/deceptive wordclouds.</p>
+
+<p><em>Example:</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>From original dataset:</td>
+      <td>After retweets removed:</td>
+    </tr>
+    <tr>
+      <td><img src="https://scholarslab.github.io/learn-twarc/assets/images/wordcloud-1.png" alt="Screenshot of wordcloud" /></td>
+      <td><img src="https://scholarslab.github.io/learn-twarc/assets/images/wordcloud-2.png" alt="Screenshot of wordcloud" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>That large red “arm…” in the original dataset was from a highly retweeted tweet, where the word “army” was cut off mid-word in the retweet data.</em></p>
+
+<h2 id="tweet-network-graph">Tweet Network Graph</h2>
+<p>Create a network graph from your tweet data, use the following command (note there is no ‘&gt;’ in this command between the jsonl file name and the html file name):</p>
+
+<p><code>utils/tweet_network.py <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code></p>
+
+<p>Output: Creates an html file, open in your browser to view the network graph of your tweets. This script only shows a graph of original tweets that have been quoted and/or have replies (not the entire dataset). Hover over circles to show connections, click to show tweet (if you click and no tweet appears, it was likely deleted or set private)</p>
+
+<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-network.png" alt="Screenshot of tweet network" /></p>
+
+<p>To <strong>include retweets</strong> in your network graph, use the following command (if you have a very large dataset, this will take a long time to load, and may be too crowded to read well):</p>
+
+<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-network-retweets.png" alt="Screenshot of tweet network w retweets" /></p>
+
+<p><code>utils/tweet_network.py --retweets <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code></p>
+
+<p>Output: an html file of your network graph, including retweets. Open in browser:</p>
+
+<h2 id="create-geojson">Create Geojson</h2>
+<p>Use the following command:</p>
+
+<p><code>utils/geojson.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets</span>.geojson</code></p>
+
+<p>Output: Creates a .geojson file. Quickly create map from geojson file:</p>
+<ul>
+  <li><a href="http://geojson.io">Geojson.io</a></li>
+  <li>With a github account, logged in: <a href="https://gist.github.com/">https://gist.github.com/</a>, drag geojson file into browser window, and save gist. Will automatically make into a map</li>
+</ul>
+
+<h2 id="tweet-wall">Tweet Wall</h2>
+<p>Create a wall of tweets, use the following command:</p>
+
+<p><code>utils/wall.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets</span>.html</code></p>
+
+<p>Output: Creates an html file, open in your browser to view all tweets, easy to browse through.</p>
+
+<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-wall.png" alt="Screenshot of tweet wall" /></p>
+
+<h2 id="media-urls">Media URLs</h2>
+<p>Creates a text file the URLs of images uploaded to Twitter in a tweet json. Use the following command:</p>
+
+<p><code>utils/media_urls.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets_media</span>.txt</code></p>
+
+<p>Output: Creates a text document with the tweet ids and media urls.</p>
+
+<p>For just a list of embedded media URLs (without the associated tweet id):</p>
+
+<p><code>utils/embeds.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets_embeds</span>.txt</code></p>
+
+<h2 id="remove-retweets-from-jsonl">Remove Retweets from JSONL</h2>
+<p>Creates a new JSONL file with retweets removed. Use the following command:</p>
+
+<p><code>utils/noretweets.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets_noretweets</span>.jsonl</code></p>
+
+<h2 id="sort-tweets-chronologically">Sort Tweets Chronologically</h2>
+<p>Tweet IDs are generated chronologically. This command will sort your tweet data by Tweet ID in ascending order, which is the same as sorting by date:</p>
+
+<p><code>utils/sort_by_id.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets_sorted</span>.jsonl</code></p>
+
+<p>Once you have a JSONL sorted chronologically, we can identify the first and last tweets in your data set, to establish the time frame of your collection.</p>
+
+<p>To see the first 10 tweets in the dataset (and create a text file to view this data):</p>
+
+<p><code>head <span style="color:blue">tweets_sorted</span>.jsonl &gt; <span style="color:blue">tweets_head</span>.txt</code></p>
+
+<p>To see the last 10 tweets in the dataset (and create a text file to view this data):</p>
+
+<p><code>tail <span style="color:blue">tweets_sorted</span>.jsonl &gt; <span style="color:blue">tweets_tail</span>.txt</code></p>
+
+<p>Another option is to <a href="#convert-json-to-csv">create a csv</a>, open in Excel and sort the “id” column by ascending and descending order to identify the first and last tweets in your dataset.</p>
+
+<h2 id="remove-tweets-before-certain-date">Remove Tweets Before Certain Date</h2>
+<p>You may want to study tweets from only a select number of days in your dataset. For example, you’ve searched a hashtag related to an event that occured within the last two days, but your search query retrieves tweets from the previous seven days.</p>
+
+<p>Use this command to remove tweets occurring before a given date:</p>
+
+<p><code>utils\filter_date.py --mindate <span style="color:blue">13-oct-2019</span> <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">filtered</span>.jsonl</code></p>
+
+<h2 id="remove-duplicate-tweets">Remove Duplicate Tweets</h2>
+<p>Creates a new JSONL file with no duplicate tweets. This script removes any tweets with duplicate IDs. Use the following command:</p>
+
+<p><code>utils/deduplicate.py <span style="color:blue">tweets</span>.jsonl &gt; <span style="color:blue">tweets_deduped</span>.jsonl</code></p>
 
     </div>
 

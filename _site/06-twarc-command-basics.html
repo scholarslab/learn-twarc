@@ -147,13 +147,13 @@
   </li>
   <li><strong>Start Twarcing!</strong>
     <ul>
-      <li><strong>Enter</strong> the twarc commands into your command line, following the detailed usage guides below. 
+      <li><strong>Enter</strong> the twarc commands into your command line, following the detailed usage guide below. 
  <!-- - **Usage Guides:** [for MacOS](/learn-twarc/06-usage-mac) \| [for Windows](/learn-twarc/06-usage-windows) --></li>
     </ul>
   </li>
 </ol>
 
-<h2 class="no_toc" id="twarc-usage-guide">Twarc Usage Guide:</h2>
+<h2 class="no_toc" id="twarc-usage-guide">Twarc Usage Guide</h2>
 <!-- ### [for MacOS](/learn-twarc/06-usage-mac) \| [for Windows](/learn-twarc/06-usage-windows) -->
 
 <p>For the following twarc lessons, all <code><span style="color:blue">blue text</span></code> can be modified to fit your purpose. These are either file names or search/filter terms.</p>
@@ -179,11 +179,11 @@
 <hr />
 
 <h2 id="search">Search</h2>
-<p>This uses Twitter’s <a href="https://developer.twitter.com/en/docs/api-reference-index">search/tweets</a> to download <em>pre-existing</em> tweets from the prior 7 days matching a given query. You can use any word or hashtag, capitalization does not matter in this case. If you search for a phrase (that includes spaces between words), enclose it within quotes, i.e. “climate strike”. The 7 day window is imposed by Twitter’s search API. To collect tweets as they happen in real time, use the filter command.</p>
+<p>This uses Twitter’s <a href="https://developer.twitter.com/en/docs/api-reference-index">search/tweets</a> API to download <em>pre-existing</em> tweets from the prior 7 days matching a given query. You can use any word or hashtag, capitalization does not matter in this case. If you search for a phrase (that includes spaces between words), enclose it within quotes, i.e. “climate strike”. The 7 day window is imposed by Twitter’s search API. To collect tweets as they happen in real time, use the <a href="#filter">filter</a> command.</p>
 
 <p>Type the following into your command prompt and press enter:</p>
 
-<p><code>twarc search <span style="color:blue">blacklivematter</span> &gt; <span style="color:blue">tweets</span>.jsonl</code></p>
+<p><code>twarc search <span style="color:blue">blacklivesmatter</span> &gt; <span style="color:blue">tweets</span>.jsonl</code></p>
 
 <ul>
   <li>
@@ -197,7 +197,7 @@
     <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-data-folder.png" alt="Screen shot of twarc log files" /></p>
   </li>
   <li>
-    <p>You can stop the process at any time by entering <strong>Ctrl + C</strong>, but to get the entire collection for your search query, you must keep the process running until it completes.</p>
+    <p>You can stop the process at any time by entering <strong>Ctrl + C</strong>, but to get the entire collection for your search query, you must keep the process running without interruption until it completes.</p>
   </li>
 </ul>
 
@@ -278,10 +278,12 @@
 
 <ul>
   <li>You should now have a text file in your twarc folder containing the unique tweet ids of all tweets in your dataset.</li>
-  <li>Open the .txt file to see the list of unique tweet ids:</li>
-</ul>
+  <li>
+    <p>Open the .txt file to see the list of unique tweet ids:</p>
 
-<p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-ids.png" alt="Screen shot of tweet ids txt file" /></p>
+    <p><img src="https://scholarslab.github.io/learn-twarc/assets/images/tweet-ids.png" alt="Screen shot of tweet ids txt file" /></p>
+  </li>
+</ul>
 
 <h3 id="rehydrate-a-dataset">Rehydrate a Dataset</h3>
 
