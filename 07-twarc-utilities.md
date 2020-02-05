@@ -5,7 +5,11 @@ title: Twarc Utilities
 
 # Twarc Utilities 
 
-Twarc comes with a set utilities that will help you explore the data you’ve collected. To begin, first [download the utilities folder from github](#get-the-utilities-from-github). Then, select the relevant utilities guide:
+Twarc comes with a set utilities that will help you explore the data you’ve collected. To begin, first [download the utilities folder from github](#get-the-utilities-from-github). 
+
+Next, [install a few python modules](#install-relevant-python-packages) required for some of the utilities. See [here](#install-relevant-python-packages) for details.
+
+Then, select the relevant utilities guide:
 ### [for MacOS]({{site.baseurl}}/07-utilities-mac) \| [for Windows]({{site.baseurl}}/07-utilities-windows)
 
 ---
@@ -33,3 +37,24 @@ Twarc comes with a set utilities that will help you explore the data you’ve co
     ![Screenshot of twarc folder with utils]({{ site.url }}{{ site.baseurl }}/assets/images/twarc-utils-2.png)
 
 For the purposes of this tutorial, all you need to do is make sure the JSONL file of collected tweet data you want to use is in the same folder as the utils folder (but not inside this utils folder, see screenshot above for an example).
+
+## Install relevant Python packages
+
+pip install the following packages for the associated utility. You'll only need to do this step once. If you run a twarc utility and recieve an error `requires <something> module`, you can follow the pattern below, and enter the command, `pip install <something>`, and/or search for the package on [https://pypi.org/](https://pypi.org/) 
+
+Open the Terminal application (MacOS users), or Command Prompt (Windows users), and enter the following, one at a time:
+
+### For the emoji utility:
+
+    pip install emoji
+
+Installs the [emoji package](https://pypi.org/project/emoji/)
+
+### For the tweet network graph:
+
+    pip install networkx
+
+Installs the [networkx package](https://pypi.org/project/networkx/)
+
+
+

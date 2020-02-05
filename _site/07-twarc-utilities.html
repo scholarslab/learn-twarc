@@ -131,7 +131,11 @@
   <!-- <h1 class="page-title">Twarc Utilities</h1> -->
   <h1 id="twarc-utilities">Twarc Utilities</h1>
 
-<p>Twarc comes with a set utilities that will help you explore the data you’ve collected. To begin, first <a href="#get-the-utilities-from-github">download the utilities folder from github</a>. Then, select the relevant utilities guide:</p>
+<p>Twarc comes with a set utilities that will help you explore the data you’ve collected. To begin, first <a href="#get-the-utilities-from-github">download the utilities folder from github</a>.</p>
+
+<p>Next, <a href="#install-relevant-python-packages">install a few python modules</a> required for some of the utilities. See <a href="#install-relevant-python-packages">here</a> for details.</p>
+
+<p>Then, select the relevant utilities guide:</p>
 <h3 id="for-macos--for-windows"><a href="/learn-twarc/07-utilities-mac">for MacOS</a> | <a href="/learn-twarc/07-utilities-windows">for Windows</a></h3>
 
 <hr />
@@ -168,6 +172,27 @@
 </ol>
 
 <p>For the purposes of this tutorial, all you need to do is make sure the JSONL file of collected tweet data you want to use is in the same folder as the utils folder (but not inside this utils folder, see screenshot above for an example).</p>
+
+<h2 id="install-relevant-python-packages">Install relevant Python packages</h2>
+
+<p>pip install the following packages for the associated utility. You’ll only need to do this step once. If you run a twarc utility and recieve an error <code class="highlighter-rouge">requires &lt;something&gt; module</code>, you can follow the pattern below, and enter the command, <code class="highlighter-rouge">pip install &lt;something&gt;</code>, and/or search for the package on <a href="https://pypi.org/">https://pypi.org/</a></p>
+
+<p>Open the Terminal application (MacOS users), or Command Prompt (Windows users), and enter the following, one at a time:</p>
+
+<h3 id="for-the-emoji-utility">For the emoji utility:</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install emoji
+</code></pre></div></div>
+
+<p>Installs the <a href="https://pypi.org/project/emoji/">emoji package</a></p>
+
+<h3 id="for-the-tweet-network-graph">For the tweet network graph:</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install networkx
+</code></pre></div></div>
+
+<p>Installs the <a href="https://pypi.org/project/networkx/">networkx package</a></p>
+
 
 </div>
 
