@@ -26,3 +26,5 @@ For troubleshooting with twarc, please contact the developers of [DocNow](https:
 For more information on twarc and other DocNow tools, please visit [docnow.io](https://www.docnow.io/).
 
 This site was built in the [UVA Library's Scholars' Lab](https://scholarslab.lib.virginia.edu/) to provide classroom materials and help support twarc users, in collaboration with DocNow, with thanks in part to a [Mellon Foundation](https://mellon.org/) grant.
+
+Please provide any feedback specific to this site [here](https://github.com/scholarslab/learn-twarc/issues).
