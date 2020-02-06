@@ -104,7 +104,7 @@ _That large red “arm…” in the original dataset was from a highly retweeted
 ## Tweet Network Graph
 Create a network graph from your tweet data, use the following command (note there is no ‘>’ in this command between the jsonl file name and the html file name): 
 
-<code>python utils/tweet_network.py <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code>
+<code>python utils/d3_network.py <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code>
 
 Output: Creates an html file, open in your browser to view the network graph of your tweets. This script only shows a graph of original tweets that have been quoted and/or have replies (not the entire dataset). Hover over circles to show connections, click to show tweet (if you click and no tweet appears, it was likely deleted or set private)
 
@@ -112,7 +112,7 @@ Output: Creates an html file, open in your browser to view the network graph of 
 
 To **include retweets** in your network graph, use the following command (if you have a very large dataset, this will take a long time to load, and may be too crowded to read well):
 
-<code>python utils/tweet_network.py --retweets <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code>
+<code>python utils/d3_network.py --retweets <span style="color:blue">tweets</span>.jsonl <span style="color:blue">tweet_graph</span>.html</code>
 
 Output: an html file of your network graph, including retweets. Open in browser:
 
